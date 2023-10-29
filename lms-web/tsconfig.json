@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "incremental": true,
+    "jsx": "react-jsx",
+    "lib": ["DOM", "ES2019", "ES2020", "ES2021", "ES2022", "ES2023"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "./build",
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ESNext",
+    "typeRoots" : [
+      "./node_modules/@types/",
+      "./typings/"
+    ],
+  },
+  "exclude": [
+    ".bundle/*",
+    ".yarn/*",
+    "android/*",
+    "ios/*",
+    "node_modules/*"
+  ],
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true
+  }
+}
