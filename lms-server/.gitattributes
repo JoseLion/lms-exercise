@@ -1,0 +1,3 @@
+# required by gradle on Windows
+buildscript-gradle.lockfile text eol=auto
+gradle.lockfile text eol=auto

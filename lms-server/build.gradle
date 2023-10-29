@@ -1,0 +1,83 @@
+plugins {
+  id('checkstyle')
+  id('java')
+
+  alias(libs.plugins.prettyJupiter)
+  alias(libs.plugins.sonarlint.plugin)
+  alias(libs.plugins.spring.boot)
+  alias(libs.plugins.spring.management)
+  alias(libs.plugins.strictNullCheck)
+}
+
+group = 'io.github.joselion'
+version = '0.0.1-SNAPSHOT'
+
+java {
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(20)
+  }
+}
+
+strictNullCheck {
+  addEclipse()
+  packageInfo.useEclipse()
+}
+
+checkstyle {
+  setToolVersion(libs.versions.checkstyle.get())
+}
+
+sonarLint {
+  setToolVersion(libs.versions.sonarlint.core.get())
+  languages {
+    include('java')
+  }
+  rules {
+    enable(
+      'java:S4266', // "Stream.collect()" calls should not be redundant
+    )
+    disable(
+      'java:S107', // Allow constructors with more than 7 parameters
+      'java:S3776', // Allow methods with more than 15 lines
+      'java:S4032', // Allow packages only containing `package-info.java`
+    )
+  }
+}
+
+configurations {
+  compileOnly {
+    extendsFrom(annotationProcessor)
+  }
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  annotationProcessor(libs.lombok)
+  annotationProcessor(libs.spring.configurationProcessor)
+  compileOnly(libs.lombok)
+  developmentOnly(libs.spring.devtools)
+  runtimeOnly(libs.postgresql)
+  sonarlintCorePlugins(libs.sonarlint.java)
+
+  implementation(libs.springDotenv)
+
+  implementation(libs.spring.jpa)
+  implementation(libs.spring.security)
+  implementation(libs.spring.web)
+}
+
+testing {
+  suites {
+    test {
+      useJUnitJupiter(libs.versions.junit.get())
+
+      dependencies {
+        implementation(libs.spring.test)
+        implementation(libs.spring.security.test)
+      }
+    }
+  }
+}
