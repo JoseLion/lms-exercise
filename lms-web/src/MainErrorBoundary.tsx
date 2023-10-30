@@ -19,7 +19,9 @@ export const MainErrorBoundary = memo((props: MainErrorBoundaryProps): ReactElem
       }
 
       if (error.response.status === UNAUTHORIZED) {
-        return alert("Unathorized!");
+        const message = error.response.data;
+
+        return alert(typeof message === "string" && message ? message : "Unauthorized!");
       }
 
       if (error.response.status === UNPROCESSABLE_ENTITY) {
