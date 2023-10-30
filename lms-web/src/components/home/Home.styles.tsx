@@ -24,7 +24,7 @@ export const ButtonRow = styled.div`
 
 export const HomeModal = styled(Card)`
   left: calc(50% - 25vw / 2);
-  min-height: 60%;
+  min-height: 40%;
   top: 10%;
   width: 25vw;
 `;

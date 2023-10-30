@@ -1,5 +1,7 @@
 package io.github.joselion.lmsserver.handlers.student;
 
+import static org.springframework.web.servlet.function.ServerResponse.ok;
+
 import java.io.IOException;
 
 import org.springframework.stereotype.Service;
@@ -46,6 +48,6 @@ public record StudentHandler(
       .withPhoneNumber(body.phoneNumber());
     final var saved = this.studentRepo.save(student);
 
-    return ServerResponse.ok().body(saved.id());
+    return ok().body(saved.getId());
   }
 }

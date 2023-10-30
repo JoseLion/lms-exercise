@@ -24,8 +24,7 @@ public record StudentBody(
 ) {
 
   public void validate() {
-    final var validator = ValidatorBuilder
-      .of(StudentBody.class)
+    final var validator = ValidatorBuilder.of(StudentBody.class)
       .constraint(StudentBody::email, "email", c -> c.notNull().email())
       .constraint(StudentBody::password, "password", c -> c.notNull().notBlank())
       .constraint(StudentBody::firstName, "firstName", c -> c.notNull().notBlank())
