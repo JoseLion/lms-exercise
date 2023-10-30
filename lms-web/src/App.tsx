@@ -1,17 +1,21 @@
-import { Callout, H1 } from "@blueprintjs/core";
 import { ReactElement, StrictMode } from "react";
+import { BrowserRouter } from "react-router-dom";
 
 import { MainErrorBoundary } from "./MainErrorBoundary";
+import { GlobalStyles } from "./components/common/Global.styles";
+import { MainNavigator } from "./navigation/MainNavigator.component";
 
 export function App(): ReactElement {
 
   return (
     <StrictMode>
-      <MainErrorBoundary>
-        <Callout intent="primary">
-          <H1>{"Hello world!"}</H1>
-        </Callout>
-      </MainErrorBoundary>
+      <GlobalStyles />
+
+      <BrowserRouter>
+        <MainErrorBoundary>
+          <MainNavigator />
+        </MainErrorBoundary>
+      </BrowserRouter>
     </StrictMode>
   );
 }
