@@ -18,6 +18,7 @@ dependencyResolutionManagement {
       plugin('strictNullCheck', 'io.github.joselion.strict-null-check').version('3.1.0')
 
       library('lombok', 'org.projectlombok', 'lombok').withoutVersion()
+      library('flyway-core', 'org.flywaydb', 'flyway-core').withoutVersion()
       library('sonarlint-java', 'org.sonarsource.java', 'sonar-java-plugin').version('7.27.1.33504')
       library('springDotenv', 'me.paulschwarz', 'spring-dotenv').version('4.0.0')
       library('spring-configurationProcessor', 'org.springframework.boot', 'spring-boot-configuration-processor').withoutVersion()
@@ -28,6 +29,7 @@ dependencyResolutionManagement {
       library('spring-test', 'org.springframework.boot', 'spring-boot-starter-test').withoutVersion()
       library('spring-web', 'org.springframework.boot', 'spring-boot-starter-web').withoutVersion()
       library('postgresql', 'org.postgresql', 'postgresql').withoutVersion()
+      library('yavi', 'am.ik.yavi', 'yavi').version('0.13.1')
     }
   }
 }

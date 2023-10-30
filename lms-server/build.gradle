@@ -62,11 +62,12 @@ dependencies {
   runtimeOnly(libs.postgresql)
   sonarlintCorePlugins(libs.sonarlint.java)
 
+  implementation(libs.flyway.core)
   implementation(libs.springDotenv)
-
   implementation(libs.spring.jpa)
   implementation(libs.spring.security)
   implementation(libs.spring.web)
+  implementation(libs.yavi)
 }
 
 testing {

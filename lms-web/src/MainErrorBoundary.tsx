@@ -23,14 +23,6 @@ export const MainErrorBoundary = memo((props: MainErrorBoundaryProps): ReactElem
       }
 
       if (error.response.status === UNPROCESSABLE_ENTITY) {
-        if (Array.isArray(error.response.data)) {
-          const message = error.response.data
-            .map(String)
-            .join("\n");
-
-          return alert(message);
-        }
-
         return alert(String(error.response.data));
       }
 

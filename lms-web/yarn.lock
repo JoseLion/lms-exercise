@@ -1760,6 +1760,72 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lukeed/csprng@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@lukeed/csprng@npm:1.1.0"
+  checksum: 5d6dcf478af732972083ab2889c294b57f1028fa13c2c240d7a4aaa079c2c75df7ef0dcbdda5419147fc6704b4adf96b2de92f1a9a72ac21c6350c4014fffe6c
+  languageName: node
+  linkType: hard
+
+"@lukeed/uuid@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@lukeed/uuid@npm:2.0.1"
+  dependencies:
+    "@lukeed/csprng": "npm:^1.1.0"
+  checksum: f9cc0385021f352f444d96dd101afd2a0efd3b2e85a61ac67deb8220409f75a6a426ed6525d297d97746f7931e3079ac6218777551a7c82686de7d292220cb1f
+  languageName: node
+  linkType: hard
+
+"@lynxts/core@npm:^1.1.5":
+  version: 1.1.5
+  resolution: "@lynxts/core@npm:1.1.5"
+  dependencies:
+    "@lukeed/uuid": "npm:^2.0.1"
+    dot-prop-immutable: "npm:^2.1.1"
+    scheduler: "npm:^0.23.0"
+    use-context-selector: "npm:^1.4.1"
+    yup: "npm:^1.2.0"
+    zod: "npm:^3.21.4"
+  peerDependencies:
+    react: ">=16.8.0"
+    yup: ">=1.0.0"
+    zod: ">=3.0.0"
+  dependenciesMeta:
+    yup:
+      optional: true
+    zod:
+      optional: true
+  peerDependenciesMeta:
+    react:
+      optional: false
+    yup:
+      optional: true
+    zod:
+      optional: true
+  checksum: 16879600067d67e963fc9d1e1ba40a2aba074f757b20b6b71e6c17d74e07f24b4853ed64e08838febe2032475eb6c37eb4d1fca1df907b541ff55e3b8a08d56a
+  languageName: node
+  linkType: hard
+
+"@lynxts/web@npm:^1.1.5":
+  version: 1.1.5
+  resolution: "@lynxts/web@npm:1.1.5"
+  dependencies:
+    react-fast-compare: "npm:^3.2.2"
+  peerDependencies:
+    "@lynxts/core": ">=1.0.0"
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  peerDependenciesMeta:
+    "@lynxts/core":
+      optional: false
+    react:
+      optional: false
+    react-dom:
+      optional: false
+  checksum: b4a5fb04c1c78de94ee8e2652b7d66e94146e2c23d68ad0d644f82c077ad82da043121f49e469867fbd455021ab81ab828d97ab19830a17c19a28661de52813d
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -1870,6 +1936,13 @@ __metadata:
   version: 2.11.8
   resolution: "@popperjs/core@npm:2.11.8"
   checksum: 4681e682abc006d25eb380d0cf3efc7557043f53b6aea7a5057d0d1e7df849a00e281cd8ea79c902a35a414d7919621fc2ba293ecec05f413598e0b23d5a1e63
+  languageName: node
+  linkType: hard
+
+"@remix-run/router@npm:1.10.0":
+  version: 1.10.0
+  resolution: "@remix-run/router@npm:1.10.0"
+  checksum: 062c7203c0e5f40f22746e1deb3e8063a3548868bfad91edc3dc8457fe3e3bc952f4d5c266f4481a7627bae5815c8d5eb9c987b1951a259b2697ccd5ed35e3da
   languageName: node
   linkType: hard
 
@@ -4480,6 +4553,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dot-prop-immutable@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "dot-prop-immutable@npm:2.1.1"
+  checksum: d3826411b717be8b69f92c6a2996408c2669fee81f2e7c78ed961f4835cc977cceaf9083d822685cb1f8e8970f8265b85c6a216e1593e5afa3c4cd9c893d1489
+  languageName: node
+  linkType: hard
+
 "dotenv-defaults@npm:^2.0.2":
   version: 2.0.2
   resolution: "dotenv-defaults@npm:2.0.2"
@@ -6655,6 +6735,8 @@ __metadata:
     "@blueprintjs/datetime2": "npm:^2.2.2"
     "@blueprintjs/icons": "npm:^5.2.1"
     "@blueprintjs/select": "npm:^5.0.16"
+    "@lynxts/core": "npm:^1.1.5"
+    "@lynxts/web": "npm:^1.1.5"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.5.11"
     "@svgr/webpack": "npm:^8.1.0"
     "@testing-library/dom": "npm:^9.3.3"
@@ -6697,6 +6779,7 @@ __metadata:
     react-fast-compare: "npm:^3.2.2"
     react-refresh: "npm:^0.14.0"
     react-refresh-typescript: "npm:^2.0.9"
+    react-router-dom: "npm:^6.17.0"
     rxjs: "npm:^7.8.1"
     rxjs-axios: "npm:^1.4.0"
     sinon: "npm:^17.0.0"
@@ -6712,6 +6795,7 @@ __metadata:
     webpack-cli: "npm:^5.1.4"
     webpack-dev-server: "npm:^4.15.1"
     webpack-merge: "npm:^5.10.0"
+    yup: "npm:^1.3.2"
   languageName: unknown
   linkType: soft
 
@@ -7857,6 +7941,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"property-expr@npm:^2.0.5":
+  version: 2.0.6
+  resolution: "property-expr@npm:2.0.6"
+  checksum: 69b7da15038a1146d6447c69c445306f66a33c425271235bb20507f1846dbf9577a8f9dfafe8acbfcb66f924b270157f155248308f026a68758f35fc72265b3c
+  languageName: node
+  linkType: hard
+
 "proxy-addr@npm:~2.0.7":
   version: 2.0.7
   resolution: "proxy-addr@npm:2.0.7"
@@ -8042,6 +8133,30 @@ __metadata:
   version: 0.14.0
   resolution: "react-refresh@npm:0.14.0"
   checksum: b8ae07ad153357d77830928a7f1fc2df837aabefee907fa273ba04c7643f3b860e986f1d4b7ada9b721c8d79b8c24b5b911a314a1a2398b105f1b13d19ea2b8d
+  languageName: node
+  linkType: hard
+
+"react-router-dom@npm:^6.17.0":
+  version: 6.17.0
+  resolution: "react-router-dom@npm:6.17.0"
+  dependencies:
+    "@remix-run/router": "npm:1.10.0"
+    react-router: "npm:6.17.0"
+  peerDependencies:
+    react: ">=16.8"
+    react-dom: ">=16.8"
+  checksum: c22e66a2b8d5678434039fe4123f76ab85e6e46d526fbf4b29b4b6423c5589759535d56afa51a4f598b5c15be7e47f2d0d409cd7a40f21c0ecdc59605b7f4bfa
+  languageName: node
+  linkType: hard
+
+"react-router@npm:6.17.0":
+  version: 6.17.0
+  resolution: "react-router@npm:6.17.0"
+  dependencies:
+    "@remix-run/router": "npm:1.10.0"
+  peerDependencies:
+    react: ">=16.8"
+  checksum: f940ee641c87f7c179f6547b65c6b055f916d4b26b30f9b964cb1628f39b1899f25e4b92285427660c5444809c04dcc42dd976d9ce12ed6ed13b1be50a29c691
   languageName: node
   linkType: hard
 
@@ -9208,6 +9323,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tiny-case@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "tiny-case@npm:1.0.3"
+  checksum: c0cbed35884a322265e2cd61ff435168d1ea523f88bf3864ce14a238ae9169e732649776964283a66e4eb882e655992081d4daf8c865042e2233425866111b35
+  languageName: node
+  linkType: hard
+
 "to-fast-properties@npm:^2.0.0":
   version: 2.0.0
   resolution: "to-fast-properties@npm:2.0.0"
@@ -9228,6 +9350,13 @@ __metadata:
   version: 1.0.1
   resolution: "toidentifier@npm:1.0.1"
   checksum: 93937279934bd66cc3270016dd8d0afec14fb7c94a05c72dc57321f8bd1fa97e5bea6d1f7c89e728d077ca31ea125b78320a616a6c6cd0e6b9cb94cb864381c1
+  languageName: node
+  linkType: hard
+
+"toposort@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "toposort@npm:2.0.2"
+  checksum: ab9ca91fce4b972ccae9e2f539d755bf799a0c7eb60da07fd985fce0f14c159ed1e92305ff55697693b5bc13e300f5417db90e2593b127d421c9f6c440950222
   languageName: node
   linkType: hard
 
@@ -9409,6 +9538,13 @@ __metadata:
   version: 0.20.2
   resolution: "type-fest@npm:0.20.2"
   checksum: dea9df45ea1f0aaa4e2d3bed3f9a0bfe9e5b2592bddb92eb1bf06e50bcf98dbb78189668cd8bc31a0511d3fc25539b4cd5c704497e53e93e2d40ca764b10bfc3
+  languageName: node
+  linkType: hard
+
+"type-fest@npm:^2.19.0":
+  version: 2.19.0
+  resolution: "type-fest@npm:2.19.0"
+  checksum: a5a7ecf2e654251613218c215c7493574594951c08e52ab9881c9df6a6da0aeca7528c213c622bc374b4e0cb5c443aa3ab758da4e3c959783ce884c3194e12cb
   languageName: node
   linkType: hard
 
@@ -9619,6 +9755,23 @@ __metadata:
     querystringify: "npm:^2.1.1"
     requires-port: "npm:^1.0.0"
   checksum: bd5aa9389f896974beb851c112f63b466505a04b4807cea2e5a3b7092f6fbb75316f0491ea84e44f66fed55f1b440df5195d7e3a8203f64fcefa19d182f5be87
+  languageName: node
+  linkType: hard
+
+"use-context-selector@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "use-context-selector@npm:1.4.1"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: "*"
+    react-native: "*"
+    scheduler: ">=0.19.0"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 9751181117fdb47049aec8f3a6ccc4f1286e8661c769dbed554d58e478538cb83dac180a62baedcb3f65c99c3ed41d5423a955c9b7c12133b0e4263c30255bff
   languageName: node
   linkType: hard
 
@@ -10150,5 +10303,24 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: dceb44c28578b31641e13695d200d34ec4ab3966a5729814d5445b194933c096b7ced71494ce53a0e8820685d1d010df8b2422e5bf2cdea7e469d97ffbea306f
+  languageName: node
+  linkType: hard
+
+"yup@npm:^1.2.0, yup@npm:^1.3.2":
+  version: 1.3.2
+  resolution: "yup@npm:1.3.2"
+  dependencies:
+    property-expr: "npm:^2.0.5"
+    tiny-case: "npm:^1.0.3"
+    toposort: "npm:^2.0.2"
+    type-fest: "npm:^2.19.0"
+  checksum: 0820db84fc617b5a75b739bbdef73599bc36ad5a23f2746ae2e2600bb8bc7274a4f178336ab030f5d1a36774aeb08b891aa3fb6d88f64ef61f82ffc8e328b67d
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.21.4":
+  version: 3.22.4
+  resolution: "zod@npm:3.22.4"
+  checksum: 7578ab283dac0eee66a0ad0fc4a7f28c43e6745aadb3a529f59a4b851aa10872b3890398b3160f257f4b6817b4ce643debdda4fb21a2c040adda7862cab0a587
   languageName: node
   linkType: hard

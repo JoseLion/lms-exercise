@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { axios } from "rxjs-axios";
+import { RawAxiosRequestHeaders, axios } from "rxjs-axios";
 
 const DEFAULT_HOST = `${window.location.protocol}//${window.location.hostname}`;
 
@@ -13,19 +13,44 @@ export function applyAxiosConfig(): void {
       const isoTimeRegex = /([0-1]\d|2[0-3]):([0-5]\d)(:[0-5]\d)?(.\d{1,6})?([+-](0\d|1[0-4]):[0-5]\d|Z)?/;
       const isoDateTimeRegex = new RegExp(`^(${isoDateRegex.source})(T${isoTimeRegex.source})?$`);
 
-      return JSON.parse(data, (_key, value) => {
-        if (typeof value === "string" && isoDateTimeRegex.test(value)) {
-          const dateTime = DateTime.fromISO(value);
+      try {
+        return JSON.parse(data, (_key, value) => {
+          if (typeof value === "string" && isoDateTimeRegex.test(value)) {
+            const dateTime = DateTime.fromISO(value);
 
-          return isoDateTimeRegex.exec(value)?.filter(Boolean).length === 5
-            ? dateTime.toUTC().toJSDate()
-            : dateTime.toJSDate();
-        }
+            return isoDateTimeRegex.exec(value)?.filter(Boolean).length === 5
+              ? dateTime.toUTC().toJSDate()
+              : dateTime.toJSDate();
+          }
 
-        return value;
-      });
+          return value;
+        });
+      } catch (error) {
+        return data;
+      }
     }
 
     return data;
   };
+
+  axios.interceptors.request.use(config => {
+    const { headers, data } = config;
+    const rawHeaders = typeof headers?.toJSON === "function"
+      ? headers.toJSON()
+      : { };
+    const defaultHeaders: RawAxiosRequestHeaders = {
+      "Content-Type": typeof data === "string"
+        ? "text/plain"
+        : "application/json",
+    };
+
+    return {
+      ...config,
+      data,
+      headers: {
+        ...defaultHeaders,
+        ...rawHeaders,
+      },
+    };
+  });
 }
